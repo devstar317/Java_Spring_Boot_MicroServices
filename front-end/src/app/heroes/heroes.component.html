@@ -1,0 +1,26 @@
+<p>{{title  }}</p>
+
+<div class="widget-main">
+  <table class="footable table table-bordered table-hover footable-loaded default">
+      <thead>
+          <tr>
+              <th class="footable-first-coulmn">Id</th>
+              <th class="sortable">Name</th>
+              <th>Action</th>
+          </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let hero of heroList">
+          <td>{{hero.id}}</td>  
+          <td>{{hero.name}}</td>  
+          <td>
+              <a routerLink="/detail/{{hero.id}}">
+                  <span class="blue icon-eye-open icon-large"></span>
+              </a>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+</div>
+
+
